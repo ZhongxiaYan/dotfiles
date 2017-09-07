@@ -4,6 +4,7 @@
 " 0, ^, $ - to beginning, first non-empty, end of line
 " w, b - forward, backward one word (alphanumeric)
 " W, B - forward, backward one word (space delimited)
+" <C-o>, <C-i> - previous, next cursor position
 " m {a-z A-Z} - bookmark at current position
 " :marks - list bookmarks
 " ` {a-z A-Z} - jumps to bookmark
