@@ -35,7 +35,7 @@
 " Colors {{{
 syntax enable           " enable syntax processing
 colorscheme monokai
-set termguicolors
+"set termguicolors
 " }}}
 " Misc {{{
 set backspace=indent,eol,start
