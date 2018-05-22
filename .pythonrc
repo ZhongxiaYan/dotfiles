@@ -1,0 +1,12 @@
+import sys
+
+if sys.version_info[0] < 3:
+    import rlcompleter
+    import readline
+    readline.parse_and_bind('tab: complete')
+
+try:
+    import itertools, sys, os
+    import numpy as np, scipy as sp, pandas as pd
+except ImportError:
+    pass
