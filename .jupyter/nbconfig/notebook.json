@@ -1,0 +1,13 @@
+{
+  "load_extensions": {
+    "codefolding/main": true,
+    "hinterland/hinterland": false,
+    "hide_input/main": true,
+    "varInspector/main": false,
+    "toggle_all_line_numbers/main": true
+  },
+  "hinterland": {
+    "enable_at_start": true,
+    "hint_delay": "80"
+  }
+}
