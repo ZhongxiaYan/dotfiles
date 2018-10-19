@@ -19,10 +19,6 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
@@ -98,3 +94,6 @@ export PYTHONSTARTUP=$HOME/.pythonrc
 export EDITOR='vim'
 export DISPLAY=:0
 
+if [ -f ~/.bash_custom ]; then
+    . ~/.bash_custom
+fi
