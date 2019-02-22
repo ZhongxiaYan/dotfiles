@@ -69,6 +69,11 @@ xterm*|rxvt*)
 esac
 
 PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u:\[\033[01;36m\]\w\[\033[00m\]\$ "
+export PYTHONSTARTUP=$HOME/.pythonrc
+export EDITOR='vim'
+export DISPLAY=:0
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
+
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -90,10 +95,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PYTHONSTARTUP=$HOME/.pythonrc
-export EDITOR='vim'
-export DISPLAY=:0
-
 if [ -f ~/.bash_custom ]; then
     . ~/.bash_custom
 fi
+
