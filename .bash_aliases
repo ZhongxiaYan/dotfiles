@@ -27,7 +27,7 @@ alias ...="cd ../.."
 alias .4="cd ../../../.."
 
 alias df="df -Tha --total"
-alias du="du -ach | sort -h"
+alias du="du -sh"
 alias free="free -mt"
 alias ps="ps auxf"
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
