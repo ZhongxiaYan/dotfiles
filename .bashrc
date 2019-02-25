@@ -69,6 +69,8 @@ xterm*|rxvt*)
 esac
 
 PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u:\[\033[01;36m\]\w\[\033[00m\]\$ "
+
+export PATH=~/.local/bin:$PATH
 export PYTHONSTARTUP=$HOME/.pythonrc
 export EDITOR='vim'
 export DISPLAY=:0

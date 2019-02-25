@@ -1,13 +1,19 @@
 {
-  "load_extensions": {
-    "codefolding/main": true,
-    "hinterland/hinterland": false,
-    "hide_input/main": true,
-    "varInspector/main": false,
-    "toggle_all_line_numbers/main": true
-  },
   "hinterland": {
     "enable_at_start": true,
     "hint_delay": "80"
+  },
+  "load_extensions": {
+    "rubberband/main": true,
+    "codefolding/main": true,
+    "contrib_nbextensions_help_item/main": true,
+    "nbextensions_configurator/config_menu/main": true,
+    "hide_input/main": true,
+    "toggle_all_line_numbers/main": true,
+    "hide_header/main": true,
+    "varInspector/main": false,
+    "scratchpad/main": true,
+    "hinterland/hinterland": false,
+    "execute_time/ExecuteTime": true
   }
 }

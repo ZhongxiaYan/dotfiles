@@ -1,4 +1,7 @@
 {
+  "load_extensions": {
+    "codefolding/edit": true
+  },
   "Editor": {
     "codemirror_options": {
       "vimMode": false,
