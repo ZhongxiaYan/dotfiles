@@ -11,10 +11,10 @@ for file in os.listdir(dotfiles):
     if file in link_excludes:
         continue
     path = os.path.join(dotfiles, file)
-    if os.path.exists(path):
+    dst = os.path.join(os.environ['HOME'], file)
+    if os.path.exists(dst):
         print('%s already exists, skipping link' % path)
     else:
-        dst = os.path.join(os.environ['HOME'], file)
         print('Linked %s -> %s' % (dst, path))
         os.symlink(path, dst)
 
