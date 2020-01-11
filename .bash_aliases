@@ -86,3 +86,9 @@ function port() {
     ssh -N -L "localhost:$local:localhost:$remote" $1
 }
 
+function rn() {
+    src=$(basename $(pwd))
+    cd ..
+    mv $src $1
+    cd $1
+}
