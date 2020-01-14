@@ -29,7 +29,7 @@ alias .4="cd ../../../.."
 alias df="df -Tha --total"
 alias du="du -sh"
 alias free="free -mt"
-alias ps="ps auxf"
+alias ps="ps aux"
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias wget="wget -c"
 alias myip="curl http://ipecho.net/plain; echo"
@@ -92,3 +92,5 @@ function rn() {
     mv $src $1
     cd $1
 }
+
+alias rm_pwd='OLD_PWD=$(pwd); cd ..; rm -rf $OLD_PWD'

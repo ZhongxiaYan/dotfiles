@@ -15,6 +15,8 @@ for file in os.listdir(dotfiles):
     if os.path.exists(dst):
         print('%s already exists, skipping link' % path)
     else:
+        if os.path.islink(dst):
+            os.remove(dst)
         print('Linked %s -> %s' % (dst, path))
         os.symlink(path, dst)
 
