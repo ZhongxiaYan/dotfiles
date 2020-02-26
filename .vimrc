@@ -133,6 +133,7 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 " }}}
 " airline {{{
