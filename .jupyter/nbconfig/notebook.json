@@ -15,5 +15,15 @@
     "contrib_nbextensions_help_item/main": true,
     "hide_input/main": true,
     "nbextensions_configurator/config_menu/main": true
+  },
+  "MarkdownCell": {
+    "cm_config": {
+      "lineWrapping": true
+    }
+  },
+  "CodeCell": {
+    "cm_config": {
+      "lineWrapping": true
+    }
   }
 }
