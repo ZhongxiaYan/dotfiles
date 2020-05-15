@@ -1,11 +1,17 @@
 alias tmux='TERM=xterm-256color tmux'
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+if [ "$(uname)" == "Darwin" ]; then
+    alias ls='ls -FG'
+    alias ll='ls -alFG'
+    alias la='ls -AFG'
+    alias l='ls -CFG'
+    export GREP_OPTIONS='--color=always'
+    export GREP_COLOR='1;35;40'
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     alias ls='ls --color=auto -F'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias ll='ls --color=auto -alF'
+    alias la='ls --color=auto -AF'
+    alias l='ls --color=auto -CF'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -16,11 +22,6 @@ fi
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ls='ls -FG'
-alias ll='ls -alFG'
-alias la='ls -AFG'
-alias l='ls -CFG'
-
 alias mkdir="mkdir -pv"
 alias cp="cp -r"
 alias ..="cd .."
