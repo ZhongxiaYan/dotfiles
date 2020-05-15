@@ -1,4 +1,11 @@
 " Cursor shortcuts {{{
+" leader is ,
+" [<C-d>, <C-k>, <C-u>] - Sublime matching [next, skip, prev]
+" [d0, d$, dgg, dG] - delete to [begin / end of line, begin / end of file]
+" <C-n> show nerdtree directory sidebar
+" [<leader>cc, <leader>cu] - comment, uncomment
+" [<, >] - in normal or visual mode, indent or unindent block
+"
 " <C-w> <C-w> - change tabs
 " h, l, j, k - one character to left, right, down, up
 " 0, ^, $ - to beginning, first non-empty, end of line
@@ -59,7 +66,7 @@ set nocursorline        " highlight current line
 set wildmenu
 set lazyredraw
 set showmatch           " highlight matching parenthesis
-set fillchars+=vert:┃
+" set fillchars+=vert:┃
 " }}}
 " Searching {{{
 set ignorecase          " ignore case when searching
@@ -135,6 +142,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 Plug 'terryma/vim-multiple-cursors'
 call plug#end()
+" }}}
+" multiple cursors {{{
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_word_key      = '<C-d>'
+let g:multi_cursor_next_key            = '<C-d>'
+let g:multi_cursor_prev_key            = '<C-u>'
+let g:multi_cursor_skip_key            = '<C-k>'
 " }}}
 " airline {{{
 set laststatus=2

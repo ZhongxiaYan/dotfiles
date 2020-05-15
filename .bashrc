@@ -97,7 +97,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ -f ~/.bash_custom.sh ]; then
-    . ~/.bash_custom.sh
+if [ -f ~/.custom.sh ]; then
+    . ~/.custom.sh
 fi
 

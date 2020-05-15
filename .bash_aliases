@@ -16,15 +16,17 @@ fi
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ls='ls -FG'
+alias ll='ls -alFG'
+alias la='ls -AFG'
+alias l='ls -CFG'
 
 alias mkdir="mkdir -pv"
 alias cp="cp -r"
 alias ..="cd .."
 alias ...="cd ../.."
-alias .4="cd ../../../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 alias df="df -Tha --total"
 alias du="du -sh"
@@ -91,6 +93,22 @@ function rn() {
     cd ..
     mv $src $1
     cd $1
+}
+
+function v() {
+    if [ -d "$1" ] ; then
+        ls $1 ;
+    else
+        cat $1;
+    fi
+}
+
+function vv() {
+    if [ -d "$1" ] ; then
+        ls $1 ;
+    else
+        vim $1;
+    fi
 }
 
 alias rm_pwd='OLD_PWD=$(pwd); cd ..; rm -rf $OLD_PWD'
