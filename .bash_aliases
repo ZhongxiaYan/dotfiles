@@ -5,7 +5,7 @@ if [ "$(uname)" == "Darwin" ]; then
     alias ll='ls -alFG'
     alias la='ls -AFG'
     alias l='ls -CFG'
-    export GREP_OPTIONS='--color=always'
+    export GREP_OPTIONS='--color=auto'
     export GREP_COLOR='1;35;40'
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     alias ls='ls --color=auto -F'
@@ -42,6 +42,27 @@ function mk() {
     mkdir -p "$@" && cd "$@"
 }
 
+function mkdircp {
+    src=$1
+    dst=$2
+    if [[ "$2" == *"/"* ]]; then
+        dst=`basename $dst`
+    fi
+    mkdir -p $dst
+    cp -r $src $dst
+}
+
+function mkcp {
+    src=$1
+    dst=$2
+    if [[ "$2" == *"/"* ]]; then
+        dst=`basename $dst`
+    fi
+    mkdir -p $dst
+    cp -r $src $dst
+    cd $dst
+}
+
 #   "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s
@@ -58,7 +79,7 @@ function extract {
     do
       if [ -f "$n" ] ; then
           case "${n%,}" in
-            *.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar) 
+            *.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
                          tar xvf "$n"       ;;
             *.lzma)      unlzma ./"$n"      ;;
             *.bz2)       bunzip2 ./"$n"     ;;
@@ -113,3 +134,5 @@ function vv() {
 }
 
 alias rm_pwd='OLD_PWD=$(pwd); cd ..; rm -rf $OLD_PWD'
+alias dpython='python -m pdb -c continue'
+alias pd=pushd # when pushing, can use cd~0 to go to last on stack, also cd~1 and etc
