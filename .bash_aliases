@@ -137,7 +137,3 @@ alias rm_pwd='OLD_PWD=$(pwd); cd ..; rm -rf $OLD_PWD'
 alias dpython='python -m pdb -c continue'
 alias pd=pushd # when pushing, can use cd~0 to go to last on stack, also cd~1 and etc
 
-shopt -s extglob 
-function rmexcept() {
-    rm -rf -- !($1)
-}
