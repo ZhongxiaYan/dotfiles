@@ -1,3 +1,5 @@
+shopt -s nullglob dotglob
+
 alias tmux='TERM=xterm-256color tmux'
 
 if [ "$(uname)" == "Darwin" ]; then
@@ -132,6 +134,15 @@ function vv() {
     else
         vim $1;
     fi
+}
+
+function rmexcept() {
+    files=(*)
+    rmfiles=($(comm -13 <(printf "%s\n" "${@}" | sort) <(printf "%s\n" "${files[@]}" | sort)))
+    for name in "${rmfiles[@]}"
+    do
+        rm -r "$name"
+    done
 }
 
 alias rm_pwd='OLD_PWD=$(pwd); cd ..; rm -rf $OLD_PWD'
