@@ -1,1 +1,2 @@
 "\C-b": unix-filename-rubout
+"\C-d": kill-word
