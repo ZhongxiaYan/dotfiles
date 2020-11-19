@@ -163,8 +163,16 @@ function cpall() {
 
 alias rm_pwd='OLD_PWD=$(pwd); cd ..; rm -rf $OLD_PWD'
 alias dpython='python -m pdb -c continue'
+alias dvpython='python -m pudb -c continue'
 alias pd=pushd # when pushing, can use cd~0 to go to last on stack, also cd~1 and etc
 
-alias cdn='cd "$(\ls -1dt ./*/ | head -n 1)"' # cd newest child directory
+alias cdn='cd "$(ls -1dt ./*/ | head -n 1)"' # cd newest child directory
 alias cdf='cd $(ls -d */|head -n 1)' # cd first alphabetical child directory
 alias cdl='cd $(ls -d */|tail -n 1)' # cd last alphabetical child directory
+
+if [[ $- == *i* ]] ; then
+    if command -v fish &> /dev/null
+    then
+        fish
+    fi
+fi

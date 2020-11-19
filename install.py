@@ -10,7 +10,7 @@ args = parser.parse_args()
 
 dotfiles = os.path.dirname(__file__)
 
-link_excludes = ['.git', 'install.sh', 'install.py']
+link_excludes = ['.git', 'install.sh', 'install.py', 'fish']
 
 for file in os.listdir(dotfiles):
     if file in link_excludes:
