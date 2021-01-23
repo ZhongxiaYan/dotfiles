@@ -61,9 +61,9 @@ function mkcp
 end
 
 function port
-    set remote $argv[1]
-    set local ($argv[2] || remote)
-    ssh -N -L "localhost:"$local":localhost:"$remote $1
+    set remote $argv[2]
+    set local $argv[3] $remote
+    ssh -N -L "localhost:"$local":localhost:"$remote $argv[1]
 end
 
 function rn
@@ -149,21 +149,21 @@ end
 
 function cdn
     set n $argv[1] 1
-    for i in (seq $n)
+    for i in (seq $n[1])
         cd (ls -1dt ./*/ | head -n 1)
     end
 end
 
 function cdf
     set n $argv[1] 1
-    for i in (seq $n)
+    for i in (seq $n[1])
         cd (ls -d */ | head -n 1)
     end
 end
 
 function cdl
     set n $argv[1] 1
-    for i in (seq $n)
+    for i in (seq $n[1])
         cd (ls -d */ | tail -n 1)
     end
 end
