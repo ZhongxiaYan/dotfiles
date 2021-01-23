@@ -16,6 +16,7 @@ alias ps "ps aux"
 alias psg "ps aux | grep -v grep | grep -i -e VSZ -e"
 alias wget "wget -c"
 alias myip "curl http://ipecho.net/plain; echo"
+alias tb "tensorboard --logdir"
 
 function extract --description "Expand or extract bundled & compressed files"
   set --local ext (echo $argv[1] | awk -F. '{print $NF}')
@@ -167,5 +168,3 @@ function cdl
         cd (ls -d */ | tail -n 1)
     end
 end
-
-function tb; tensorboard --logdir $argv; end
