@@ -259,7 +259,6 @@
 #  Setting to an empty string disables authentication altogether, which is NOT
 #  RECOMMENDED.
 import os
-c.NotebookApp.token = os.environ.get('JUPYTER_TOKEN', '')
 
 ## Supply overrides for the tornado.web.Application that the Jupyter notebook
 #  uses.
@@ -604,3 +603,9 @@ c.NotebookApp.token = os.environ.get('JUPYTER_TOKEN', '')
 #
 #  By default, all installed kernels are allowed.
 #c.KernelSpecManager.whitelist = set([])
+c.NotebookApp.ip = '*'
+c.NotebookApp.port = '12045'
+c.NotebookApp.allow_origin = 'https://txe1-portal.mit.edu'
+c.NotebookApp.allow_remote_access = True
+c.NotebookApp.base_url = '/fw2/d-3-2-2-12045/'
+c.NotebookNotary.db_file = u'/run/user/60784/jupyter/nbsignatures-9063.db'

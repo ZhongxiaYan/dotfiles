@@ -9,14 +9,8 @@ end
 alias ... "cd ../.."
 alias .... "cd ../../.."
 alias ..... "cd ../../../.."
-alias df "df -Tha --total"
-alias du "du -sh"
-alias free "free -mt"
-alias ps "ps aux"
-alias psg "ps aux | grep -v grep | grep -i -e VSZ -e"
 alias wget "wget -c"
 alias myip "curl http://ipecho.net/plain; echo"
-alias tb "tensorboard --logdir"
 
 function extract --description "Expand or extract bundled & compressed files"
   set --local ext (echo $argv[1] | awk -F. '{print $NF}')

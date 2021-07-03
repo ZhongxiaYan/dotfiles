@@ -170,9 +170,3 @@ alias cdn='cd "$(ls -1dt ./*/ | head -n 1)"' # cd newest child directory
 alias cdf='cd $(ls -d */|head -n 1)' # cd first alphabetical child directory
 alias cdl='cd $(ls -d */|tail -n 1)' # cd last alphabetical child directory
 
-if [[ $- == *i* ]] ; then
-    if command -v fish &> /dev/null
-    then
-        fish
-    fi
-fi

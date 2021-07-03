@@ -101,3 +101,6 @@ if [ -f ~/.custom.sh ]; then
     . ~/.custom.sh
 fi
 
+#if [[ $- == *i* ]] ; then
+#    command -v fish &> /dev/null && fish && exit
+#fi

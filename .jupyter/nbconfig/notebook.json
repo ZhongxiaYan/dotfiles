@@ -14,7 +14,8 @@
     "hinterland/hinterland": false,
     "contrib_nbextensions_help_item/main": true,
     "hide_input/main": true,
-    "nbextensions_configurator/config_menu/main": true
+    "nbextensions_configurator/config_menu/main": true,
+    "toc2/main": true
   },
   "MarkdownCell": {
     "cm_config": {
