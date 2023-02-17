@@ -1,8 +1,8 @@
-if [ "$(uname)" == "Darwin" ]; then
-    brew install fish
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    sudo apt install fish
-fi
+#if [ "$(uname)" == "Darwin" ]; then
+#    brew install fish
+#elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+#    sudo apt install fish
+#fi
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 

@@ -7,6 +7,7 @@ if [ "$(uname)" == "Darwin" ]; then
     alias ll='ls -alFG'
     alias la='ls -AFG'
     alias l='ls -CFG'
+    export LSCOLORS='ExfxbEaEBxxEhEhBaDaCaD'
     export GREP_OPTIONS='--color=auto'
     export GREP_COLOR='1;35;40'
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
